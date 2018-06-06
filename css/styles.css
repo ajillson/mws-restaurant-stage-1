@@ -108,6 +108,10 @@ nav h1 a {
   width: 100%;
   background-color: #ccc;
 }
+/* Correct width problem with Google Maps Error Message displaying too wide */
+.gm-err-content {
+  width: 80%;
+}
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
   width: 100%;
