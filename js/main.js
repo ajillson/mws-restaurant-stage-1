@@ -162,8 +162,12 @@ createRestaurantHTML = (restaurant) => {
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
-  image.src = DBHelper.imageUrlForRestaurant(restaurant);
-  image.alt = restaurant.name + "'s promotional photo";
+    const origPhotoName = DBHelper.imageUrlForRestaurant(restaurant);
+    const photoEnd = origPhotoName.length - 4;        // finds the last 4 characters of unknown file name
+    const newPhotoName = origPhotoName.slice(0, photoEnd);    // removes .jpg from file name
+  image.srcset = `${newPhotoName}_small_1x.jpg 270w, ${newPhotoName}_small_2x.jpg 540w`;
+  image.src = `${newPhotoName}_1x.jpg`;
+  image.alt = `${restaurant.name}'s promotional photo`;
   li.append(image);
 
   const div = document.createElement('div');

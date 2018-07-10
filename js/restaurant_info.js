@@ -87,9 +87,14 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   address.innerHTML = restaurant.address;
 
   const image = document.getElementById('restaurant-img');
-  image.className = 'restaurant-img'
-  image.src = DBHelper.imageUrlForRestaurant(restaurant);
-  image.alt = restaurant.name + "'s promotional photo";
+  image.className = 'restaurant-img';
+    const origPhotoName = DBHelper.imageUrlForRestaurant(restaurant);
+    const photoEnd = origPhotoName.length - 4;        // finds the last 4 characters of unknown file name
+    const newPhotoName = origPhotoName.slice(0, photoEnd);    // removes .jpg from file name
+  image.srcset = `${newPhotoName}_small_1x.jpg 270w, ${newPhotoName}_small_2x.jpg 540w, ${newPhotoName}_medium.jpg 640w, ${newPhotoName}_large.jpg 800w`;
+  image.sizes = '84vw';
+  image.src = `${newPhotoName}_medium.jpg`;
+  image.alt = `${restaurant.name}'s promotional photo`;
 
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;
@@ -127,7 +132,7 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
  */
 fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   const container = document.getElementById('reviews-container');
-  const title = document.createElement('h2');
+  const title = document.createElement('h3');
   title.innerHTML = 'Reviews';
   container.appendChild(title);
 
