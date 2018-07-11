@@ -162,25 +162,35 @@ createRestaurantHTML = (restaurant) => {
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
-  image.src = DBHelper.imageUrlForRestaurant(restaurant);
+    const origPhotoName = DBHelper.imageUrlForRestaurant(restaurant);
+    const photoEnd = origPhotoName.length - 4;        // finds the last 4 characters of unknown file name
+    const newPhotoName = origPhotoName.slice(0, photoEnd);    // removes .jpg from file name
+  image.srcset = `${newPhotoName}_small_1x.jpg 270w, ${newPhotoName}_small_2x.jpg 540w`;
+  image.src = `${newPhotoName}_1x.jpg`;
+  image.alt = `${restaurant.name}'s promotional photo`;
   li.append(image);
 
-  const name = document.createElement('h1');
+  const div = document.createElement('div');
+  div.className = 'restaurant-description';
+  li.append(div);
+
+  const name = document.createElement('h3');
   name.innerHTML = restaurant.name;
-  li.append(name);
+  div.append(name);
 
   const neighborhood = document.createElement('p');
   neighborhood.innerHTML = restaurant.neighborhood;
-  li.append(neighborhood);
+  div.append(neighborhood);
 
   const address = document.createElement('p');
   address.innerHTML = restaurant.address;
-  li.append(address);
+  div.append(address);
 
   const more = document.createElement('a');
-  more.innerHTML = 'View Details';
+  more.className = 'btn';
+  more.innerHTML = 'View Details  >';
   more.href = DBHelper.urlForRestaurant(restaurant);
-  li.append(more)
+  div.append(more)
 
   return li
 }
