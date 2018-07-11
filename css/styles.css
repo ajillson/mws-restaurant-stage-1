@@ -133,6 +133,14 @@ nav h1 {
   margin: auto;
 }
 
+/* Keeps Title from unwrapping and overflowing until there's room */
+
+@media only screen and (min-width: 403px) and (max-width: 453px) {
+  nav h1 {
+    padding: 0 5%;
+  }
+}
+
 nav h1 a {
   color: #FFF;
   font-size: 1.65rem;
@@ -480,12 +488,33 @@ p.review-comments {
   font-size: 1rem;
 }
 
-/* ====================== Media Queries ====================== */
+/* ====================== Accessibility ====================== */
 
-/* Keeps Title from unwrapping and overflowing until there's room */
+a.skip-link {
+  position: absolute;
+  left: -1000px;
+  top: auto;
+  color: #FFF;
+  background-color: #9E6700;
+  padding: 5px;
+  border: 1px solid #DDD;
+  transition: left 1s ease-out;
+  z-index: 100;
+  text-decoration: underline;
+}
 
-@media only screen and (min-width: 403px) and (max-width: 453px) {
-  nav h1 {
-    padding: 0 5%;
-  }
+a.skip-link:focus {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  transition: left 1s ease-in;
+}
+
+.screen-reader-text {
+  position: absolute;
+  left: -1000px;
+  top: auto;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
 }
