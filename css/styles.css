@@ -1,17 +1,18 @@
 /* CSS Document */
 
 /* Color Guide
-#FDFDFD   very slight off-white    body background
-#F3F3F3   slight off-white         main content
-#444      dark grey           header, footer
-#C78100   bright orange       generic links
-#DCC038   bright yellow       hover, focus links
-#9E6700   dark orange         buttons, links background
-#613F00   orange-brown        hover, focus background
-#333      slight off-black    text for light background
-#DBDBDB   very light grey     text for dark background
-#FFF      white               text
-#D0D0D0   very light grey     borders
+#FDFDFD   very slight off-white  body background
+#F3F3F3   slight off-white       main content
+#444      dark grey              header, footer
+#C78100   bright orange          generic links
+#DCC038   bright yellow          hover, focus links
+#9E6700   dark orange            buttons, links background
+#613F00   orange-brown           hover, focus background
+#333      slight off-black       text for light background
+#DBDBDB   very light grey        text for dark background
+#FFF      white                  text
+#D0D0D0   very light grey        borders
+#E4DFD9   very light warm grey   background filter section
 */
 
 body,
@@ -134,7 +135,7 @@ nav h1 {
 
 nav h1 a {
   color: #FFF;
-  font-size: 1.2rem;
+  font-size: 1.65rem;
   font-weight: 500;
   letter-spacing: 10px;
   text-transform: uppercase;
@@ -194,29 +195,48 @@ nav h1 a {
 
 .filter-options {
   width: 100%;
-  background-color: #444;
-  align-items: center;
-  padding: 10px 0;
+  background-color: #E4DFD9;
+  border-bottom: 1px solid #CCC;
+/*  align-items: center;*/
+  padding-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .filter-options h2 {
-  color: white;
-  font-size: 1rem;
+  background-color: #444;
+  color: #DDD;
+  font-size: 1.125rem;
   font-weight: normal;
+  letter-spacing: 2px;
   line-height: 1;
-  margin: 0 20px;
+  padding: 10px;
+  text-transform: uppercase;
+  width: 100%;
 }
 
 .filter-options select {
   background-color: white;
-  border: 1px solid #FFF;
+  border: 2px solid #969693;
   font-family: Arial, sans-serif;
   font-size: .85rem;
   height: 35px;
   letter-spacing: 0;
-  margin: 10px;
+  margin: 5px 10px 10px;
   padding: 0 10px;
-  /*  width: 200px;*/
+  width: 200px;
+}
+
+.filter-choice {
+  padding: 0 20px 10px;
+}
+
+.filter-choice label {
+  color: #444;
+  font-size: .875rem;
+  font-weight: 600;
+  padding: 0 10px;
+  display: block;
 }
 
 /* ================== Restaurant Listing ================== */
@@ -269,6 +289,17 @@ nav h1 a {
   letter-spacing: 0;
   line-height: 1.3;
   margin: 20px 0 10px;
+  text-transform: uppercase;
+}
+
+#restaurants-list p.neighborhood {
+  color: #DDD;
+  background-color: #333;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 2px 0;
+  text-align: center;
   text-transform: uppercase;
 }
 

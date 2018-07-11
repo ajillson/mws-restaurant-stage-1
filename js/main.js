@@ -170,6 +170,11 @@ createRestaurantHTML = (restaurant) => {
   image.alt = `${restaurant.name}'s promotional photo`;
   li.append(image);
 
+  const neighborhood = document.createElement('p');
+  neighborhood.className = 'neighborhood';
+  neighborhood.innerHTML = restaurant.neighborhood;
+  li.append(neighborhood);
+
   const div = document.createElement('div');
   div.className = 'restaurant-description';
   li.append(div);
@@ -177,10 +182,6 @@ createRestaurantHTML = (restaurant) => {
   const name = document.createElement('h3');
   name.innerHTML = restaurant.name;
   div.append(name);
-
-  const neighborhood = document.createElement('p');
-  neighborhood.innerHTML = restaurant.neighborhood;
-  div.append(neighborhood);
 
   const address = document.createElement('p');
   address.innerHTML = restaurant.address;
