@@ -119,6 +119,19 @@ section {
   width: calc(100% - 50px);
 }
 
+#footer a {
+  padding: 5px;
+}
+
+#footer a:hover,
+#footer a:focus,
+#breadcrumb li a:hover,
+#breadcrumb li a:focus {
+  background-color: #9E6700;
+  color: #FFF;
+  text-decoration: underline;
+}
+
 /* ====================== Navigation ====================== */
 
 nav {
@@ -179,7 +192,8 @@ nav h1 a {
 
 /* Add a color on mouse-over */
 
-#breadcrumb li a:hover {
+#breadcrumb li a:hover,
+#breadcrumb li a:focus {
   background-color: #9E6700;
   color: #FFF;
   text-decoration: underline;
