@@ -10,7 +10,7 @@
  * https://developers.google.com/web/fundamentals/primers/service-workers/
  */
 
-var currentCacheName = 'restaurantProject-v03';
+var currentCacheName = 'restaurantProject-v04';
 
 self.addEventListener('install', function (event) {
   event.waitUntil(
@@ -48,6 +48,7 @@ self.addEventListener('activate', function (event) {
   );
 });
 
+      // Code from https://developers.google.com/web/fundamentals/primers/service-workers/
 self.addEventListener('fetch', function (event) {
   event.respondWith(
     caches.match(event.request)
@@ -57,7 +58,6 @@ self.addEventListener('fetch', function (event) {
         return response;
       }
 
-      // Code from https://developers.google.com/web/fundamentals/primers/service-workers/
       // IMPORTANT: Clone the request. A request is a stream and
       // can only be consumed once. Since we are consuming this
       // once by cache and once by the browser for fetch, we need
