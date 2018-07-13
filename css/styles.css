@@ -505,7 +505,7 @@ a.skip-link {
   background-color: #9E6700;
   padding: 5px;
   border: 1px solid #DDD;
-  transition: left 1s ease-out;
+  transition: left 0.5s ease-out;
   z-index: 100;
   text-decoration: underline;
 }
@@ -514,7 +514,7 @@ a.skip-link:focus {
   position: absolute;
   left: 0px;
   top: 0px;
-  transition: left 1s ease-in;
+  transition: left 0.25s ease-in;
 }
 
 .screen-reader-text {
