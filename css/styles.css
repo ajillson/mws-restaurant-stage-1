@@ -1,18 +1,18 @@
 /* CSS Document */
 
 /* Color Guide
-#FDFDFD   very slight off-white  body background
-#F3F3F3   slight off-white       main content
+#fdfdfd   very slight off-white  body background
+#f3f3f3   slight off-white       main content
 #444      dark grey              header, footer
-#C78100   bright orange          generic links
-#DCC038   bright yellow          hover, focus links
-#9E6700   dark orange            buttons, links background
-#613F00   orange-brown           hover, focus background
+#c78100   bright orange          generic links
+#dcc038   bright yellow          hover, focus links
+#9e6700   dark orange            buttons, links background
+#613f00   orange-brown           hover, focus background
 #333      slight off-black       text for light background
-#DBDBDB   very light grey        text for dark background
-#FFF      white                  text
-#D0D0D0   very light grey        borders
-#E4DFD9   very light warm grey   background filter section
+#dbdbdb    very light grey        text for dark background
+#fff      white                  text
+#d0d0d0   very light grey        borders
+#e4dfd9   very light warm grey   background filter section
 */
 
 body,
@@ -26,7 +26,7 @@ p {
 }
 
 body {
-  background-color: #FDFDFD;
+  background-color: #fdfdfd;
   margin: 0 auto;
   position: relative;
   max-width: 1200px;
@@ -48,7 +48,7 @@ p {
 }
 
 body {
-  background-color: #FDFDFD;
+  background-color: #fdfdfd;
   margin: 0 auto;
   position: relative;
   max-width: 1200px;
@@ -62,18 +62,18 @@ li {
 }
 
 a {
-  color: #C78100;
+  color: #c78100;
   text-decoration: none;
 }
 
 a:hover,
 a:focus {
-  color: #DCC038;
+  color: #dcc038;
   text-decoration: none;
 }
 
 a img {
-  border: none 0px #FFF;
+  border: none 0px #fff;
 }
 
 h1,
@@ -102,7 +102,7 @@ section {
 }
 
 #maincontent {
-  background-color: #F3F3F3;
+  background-color: #f3f3f3;
   min-height: 100%;
   display: flex;
   flex-flow: column;
@@ -110,7 +110,7 @@ section {
 
 #footer {
   background-color: #444;
-  color: #DBDBDB;
+  color: #dbdbdb ;
   font-size: .75rem;
   letter-spacing: 1px;
   padding: 25px;
@@ -120,7 +120,7 @@ section {
 }
 
 #footer a {
-  color: #DBDBDB;
+  color: #dbdbdb ;
   padding: 5px;
 }
 
@@ -128,8 +128,8 @@ section {
 #footer a:focus,
 #breadcrumb li a:hover,
 #breadcrumb li a:focus {
-  background-color: #9E6700;
-  color: #FFF;
+  background-color: #9e6700;
+  color: #fff;
   text-decoration: underline;
 }
 
@@ -156,7 +156,7 @@ nav h1 {
 }
 
 nav h1 a {
-  color: #FFF;
+  color: #fff;
   font-size: 1.65rem;
   font-weight: 500;
   letter-spacing: 10px;
@@ -173,7 +173,7 @@ nav h1 a {
 /* Display list items side by side */
 
 #breadcrumb li {
-  color: #DBDBDB;
+  color: #dbdbdb ;
   display: inline;
 }
 
@@ -181,14 +181,14 @@ nav h1 a {
 
 #breadcrumb li + li:before {
   padding: 8px;
-  color: #DBDBDB;
+  color: #dbdbdb ;
   content: "/\00a0";
 }
 
 /* Add a color to all links inside the list */
 
 #breadcrumb li a {
-  color: #DBDBDB;
+  color: #dbdbdb ;
   padding: 10px;
 }
 
@@ -196,8 +196,8 @@ nav h1 a {
 
 #breadcrumb li a:hover,
 #breadcrumb li a:focus {
-  background-color: #9E6700;
-  color: #FFF;
+  background-color: #9e6700;
+  color: #fff;
   text-decoration: underline;
 }
 
@@ -206,7 +206,7 @@ nav h1 a {
 #map {
   height: 400px;
   width: 100%;
-  background-color: #CCC;
+  background-color: #ccc;
 }
 
 /* Correct width problem with Google Maps Error Message displaying too wide */
@@ -219,9 +219,9 @@ nav h1 a {
 
 .filter-options {
   width: 100%;
-  background-color: #E4DFD9;
-  border-bottom: 1px solid #CCC;
-/*  align-items: center;*/
+  background-color: #e4dfd9;
+  border-bottom: 1px solid #ccc;
+  /*  align-items: center;*/
   padding-top: 10px;
   display: flex;
   flex-wrap: wrap;
@@ -266,7 +266,7 @@ nav h1 a {
 /* ================== Restaurant Listing ================== */
 
 #restaurants-list {
-  background-color: #F3F3F3;
+  background-color: #f3f3f3;
   list-style: outside none none;
   margin: 0;
   padding: 30px 15px 60px;
@@ -277,8 +277,8 @@ nav h1 a {
 }
 
 #restaurants-list li {
-  background-color: #FFF;
-  border: 2px solid #CCC;
+  background-color: #fff;
+  border: 2px solid #ccc;
   font-family: Arial, sans-serif;
   margin: 15px;
   min-height: 380px;
@@ -290,7 +290,7 @@ nav h1 a {
 }
 
 #restaurants-list .restaurant-img {
-  background-color: #CCC;
+  background-color: #ccc;
   display: block;
   margin: 0;
   max-width: 100%;
@@ -333,9 +333,9 @@ nav h1 a {
 }
 
 #restaurants-list li a {
-  background-color: #9E6700;
+  background-color: #9e6700;
   border-bottom: 3px solid #EEE;
-  color: #FFF;
+  color: #fff;
   display: inline-block;
   font-size: .8rem;
   margin-top: 15px;
@@ -347,7 +347,7 @@ nav h1 a {
 
 #restaurants-list li a:focus,
 #restaurants-list li a:hover {
-  background-color: #613F00;
+  background-color: #613f00;
   text-decoration: underline;
 }
 
@@ -357,11 +357,11 @@ nav h1 a {
   background: none repeat scroll 0 0;
   height: 250px;
   margin: 20px 0 10px;
-/*  border-bottom: 1px solid #D0D0D0;*/
+  /*  border-bottom: 1px solid #d0d0d0;*/
 }
 
 .inside #map {
-  background-color: #CCC;
+  background-color: #ccc;
   height: 100%;
   width: 100%;
 }
@@ -387,7 +387,7 @@ nav h1 a {
   font-weight: 700;
   margin: 10px 0;
   padding-bottom: 15px;
-  border-bottom: 1px solid #D0D0D0;
+  border-bottom: 1px solid #d0d0d0;
   text-align: center;
 }
 
@@ -405,7 +405,7 @@ nav h1 a {
 }
 
 #restaurant-hours {
-/*  padding-bottom: 20px;*/
+  /*  padding-bottom: 20px;*/
   margin: auto;
 }
 
@@ -419,12 +419,12 @@ nav h1 a {
 }
 
 #restaurant-hours tr {
-  border-bottom: 1px solid #D0D0D0;
+  border-bottom: 1px solid #d0d0d0;
   height: 2.5rem;
 }
 
 #restaurant-hours tr:first-child {
-  border-top: 1px solid #D0D0D0;
+  border-top: 1px solid #d0d0d0;
 }
 
 #restaurant-container,
@@ -450,8 +450,8 @@ nav h1 a {
 }
 
 #reviews-list li {
-  background-color: #FFF;
-  border: 2px solid #D0D0D0;
+  background-color: #fff;
+  border: 2px solid #d0d0d0;
   list-style-type: none;
   margin: auto;
   overflow: hidden;
@@ -461,7 +461,7 @@ nav h1 a {
 }
 
 #reviews-container div {
-  border-bottom: 1px solid #D0D0D0;
+  border-bottom: 1px solid #d0d0d0;
   margin-top: 10px;
   display: flex;
   align-items: center;
@@ -479,9 +479,9 @@ p.reviewer-name {
 }
 
 p.review-rating {
-  background-color: #9E6700;
+  background-color: #9e6700;
   border-radius: 3px;
-  color: #FFF;
+  color: #fff;
   display: inline-block;
   font-size: 1rem;
   font-weight: 600;
@@ -503,8 +503,8 @@ a.skip-link {
   position: absolute;
   left: -1000px;
   top: auto;
-  color: #FFF;
-  background-color: #9E6700;
+  color: #fff;
+  background-color: #9e6700;
   padding: 5px;
   border: 1px solid #DDD;
   transition: left 0.5s ease-out;

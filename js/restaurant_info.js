@@ -88,9 +88,9 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
 
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img';
-    const origPhotoName = DBHelper.imageUrlForRestaurant(restaurant);
-    const photoEnd = origPhotoName.length - 4;        // finds the last 4 characters of unknown file name
-    const newPhotoName = origPhotoName.slice(0, photoEnd);    // removes .jpg from file name
+  const origPhotoName = DBHelper.imageUrlForRestaurant(restaurant);
+  const photoEnd = origPhotoName.length - 4; // finds the last 4 characters of unknown file name
+  const newPhotoName = origPhotoName.slice(0, photoEnd); // removes .jpg from file name
   image.srcset = `${newPhotoName}_small_1x.jpg 270w, ${newPhotoName}_small_2x.jpg 540w, ${newPhotoName}_medium.jpg 640w, ${newPhotoName}_large.jpg 800w`;
   image.sizes = '84vw';
   image.src = `${newPhotoName}_medium.jpg`;
@@ -183,10 +183,10 @@ createReviewHTML = (review) => {
 /**
  * Add restaurant name to the breadcrumb navigation menu
  */
-fillBreadcrumb = (restaurant=self.restaurant) => {
+fillBreadcrumb = (restaurant = self.restaurant) => {
   const breadcrumb = document.getElementById('breadcrumb');
   const li = document.createElement('li');
-  li.setAttribute('aria-current','page');
+  li.setAttribute('aria-current', 'page');
   li.innerHTML = restaurant.name;
   breadcrumb.appendChild(li);
 }

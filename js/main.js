@@ -73,10 +73,10 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
  */
 initMap = () => {
   self.newMap = L.map('map', {
-        center: [40.722216, -73.987501],
-        zoom: 12,
-        scrollWheelZoom: false
-      });
+    center: [40.722216, -73.987501],
+    zoom: 12,
+    scrollWheelZoom: false
+  });
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token={mapboxToken}', {
     mapboxToken: 'pk.eyJ1IjoiYWppbGwiLCJhIjoiY2ppcTg1MGdlMThveTNrcDhvMjgyOWp1dCJ9.4VRAMSjvx0gH4m_FmP0aWg',
     maxZoom: 18,
@@ -162,9 +162,9 @@ createRestaurantHTML = (restaurant) => {
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
-    const origPhotoName = DBHelper.imageUrlForRestaurant(restaurant);
-    const photoEnd = origPhotoName.length - 4;        // finds the last 4 characters of unknown file name
-    const newPhotoName = origPhotoName.slice(0, photoEnd);    // removes .jpg from file name
+  const origPhotoName = DBHelper.imageUrlForRestaurant(restaurant);
+  const photoEnd = origPhotoName.length - 4; // finds the last 4 characters of unknown file name
+  const newPhotoName = origPhotoName.slice(0, photoEnd); // removes .jpg from file name
   image.srcset = `${newPhotoName}_small_1x.jpg 270w, ${newPhotoName}_small_2x.jpg 540w`;
   image.src = `${newPhotoName}_1x.jpg`;
   image.alt = `${restaurant.name}'s promotional photo`;
@@ -204,6 +204,7 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     // Add marker to the map
     const marker = DBHelper.mapMarkerForRestaurant(restaurant, self.newMap);
     marker.on("click", onClick);
+
     function onClick() {
       window.location.href = marker.options.url;
     }
@@ -220,4 +221,3 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     self.markers.push(marker);
   });
 } */
-
