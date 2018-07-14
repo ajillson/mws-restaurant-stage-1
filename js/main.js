@@ -73,10 +73,10 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
  */
 initMap = () => {
   self.newMap = L.map('map', {
-        center: [40.722216, -73.987501],
-        zoom: 12,
-        scrollWheelZoom: false
-      });
+    center: [40.722216, -73.987501],
+    zoom: 12,
+    scrollWheelZoom: false
+  });
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token={mapboxToken}', {
     mapboxToken: 'pk.eyJ1IjoiYWppbGwiLCJhIjoiY2ppcTg1MGdlMThveTNrcDhvMjgyOWp1dCJ9.4VRAMSjvx0gH4m_FmP0aWg',
     maxZoom: 18,
@@ -162,25 +162,36 @@ createRestaurantHTML = (restaurant) => {
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
-  image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  const origPhotoName = DBHelper.imageUrlForRestaurant(restaurant);
+  const photoEnd = origPhotoName.length - 4; // finds the last 4 characters of unknown file name
+  const newPhotoName = origPhotoName.slice(0, photoEnd); // removes .jpg from file name
+  image.srcset = `${newPhotoName}_small_1x.jpg 270w, ${newPhotoName}_small_2x.jpg 540w`;
+  image.src = `${newPhotoName}_1x.jpg`;
+  image.alt = `${restaurant.name}'s promotional photo`;
   li.append(image);
 
-  const name = document.createElement('h1');
-  name.innerHTML = restaurant.name;
-  li.append(name);
-
   const neighborhood = document.createElement('p');
+  neighborhood.className = 'neighborhood';
   neighborhood.innerHTML = restaurant.neighborhood;
   li.append(neighborhood);
 
+  const div = document.createElement('div');
+  div.className = 'restaurant-description';
+  li.append(div);
+
+  const name = document.createElement('h3');
+  name.innerHTML = restaurant.name;
+  div.append(name);
+
   const address = document.createElement('p');
   address.innerHTML = restaurant.address;
-  li.append(address);
+  div.append(address);
 
   const more = document.createElement('a');
-  more.innerHTML = 'View Details';
+  more.className = 'btn';
+  more.innerHTML = "View Details ><span class='screen-reader-text'>about the restaurant</span>";
   more.href = DBHelper.urlForRestaurant(restaurant);
-  li.append(more)
+  div.append(more)
 
   return li
 }
@@ -193,6 +204,7 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     // Add marker to the map
     const marker = DBHelper.mapMarkerForRestaurant(restaurant, self.newMap);
     marker.on("click", onClick);
+
     function onClick() {
       window.location.href = marker.options.url;
     }
@@ -209,4 +221,3 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     self.markers.push(marker);
   });
 } */
-
