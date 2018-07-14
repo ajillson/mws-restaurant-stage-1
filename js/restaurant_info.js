@@ -1,5 +1,6 @@
 let restaurant;
 var newMap;
+var myToken = config.MY_MAPBOX_TOKEN;
 
 /**
  * Initialize map as soon as the page is loaded.
@@ -22,7 +23,7 @@ initMap = () => {
         scrollWheelZoom: false
       });
       L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token={mapboxToken}', {
-        mapboxToken: 'pk.eyJ1IjoiYWppbGwiLCJhIjoiY2ppcTg1MGdlMThveTNrcDhvMjgyOWp1dCJ9.4VRAMSjvx0gH4m_FmP0aWg',
+        mapboxToken: myToken,
         maxZoom: 18,
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
           '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
