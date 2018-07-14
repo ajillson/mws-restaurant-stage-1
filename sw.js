@@ -10,7 +10,7 @@
  * https://developers.google.com/web/fundamentals/primers/service-workers/
  */
 
-var currentCacheName = 'restaurantProject-v04';
+var currentCacheName = 'restaurantProject-v01';
 
 self.addEventListener('install', function (event) {
   event.waitUntil(
@@ -48,7 +48,7 @@ self.addEventListener('activate', function (event) {
   );
 });
 
-      // Code from https://developers.google.com/web/fundamentals/primers/service-workers/
+// Code from https://developers.google.com/web/fundamentals/primers/service-workers/
 self.addEventListener('fetch', function (event) {
   event.respondWith(
     caches.match(event.request)

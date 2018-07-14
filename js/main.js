@@ -1,8 +1,11 @@
+//esversion: 6
+
 let restaurants,
   neighborhoods,
   cuisines
 var newMap
 var markers = []
+var mapboxToken
 
 /**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.

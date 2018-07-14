@@ -108,15 +108,15 @@ section {
   flex-flow: column;
 }
 
-#footer {
+#footer p {
   background-color: #444;
   color: #dbdbdb ;
   font-size: .75rem;
   letter-spacing: 1px;
-  padding: 25px;
+  padding: 25px 0;
   text-align: center;
   text-transform: uppercase;
-  width: calc(100% - 50px);
+  width: 100%;
 }
 
 #footer a {
