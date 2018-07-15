@@ -1,8 +1,11 @@
 #### This is my version of Udacity's Mobile Web Specialist project Restaurant Reviews - Stage 1
 
-**Note: I removed my Mapbox API key and replaced it with a variable as practice for more sensitive keys.  The file where this was stored was NOT included when the project was pushed to GitHub.  
+***UPDATE 07/15/18: I recreated config.js here on GitHub as per the Reviewer's request.  The value for 'config.MY_MAPBOX_TOKEN' will still need to be **replaced** with **your own Mapbox Token** in order for the map to work.
 
-In order to use the map, the variable 'myToken' in both main.js and restaurant_info.js will need to be replaced with a token from [Mapbox](https://www.mapbox.com/).  Alternatively, another 'config.js' file could be created in the 'js' folder.  
+---
+**Note: I removed my Mapbox API key and replaced it with a variable as practice for more sensitive keys.  The file where this was stored was NOT included when the project was originally pushed to GitHub.  
+
+In order to use the map, the variable 'myToken' in both main.js and restaurant_info.js will need to be replaced with a token from [Mapbox](https://www.mapbox.com/).    
 See [derzorngottes/Hide API Keys](https://gist.github.com/derzorngottes/3b57edc1f996dddcab25) for a detailed explanation of the  process that I followed.
 
 ---
